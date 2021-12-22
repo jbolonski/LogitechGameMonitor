@@ -1,6 +1,13 @@
 #!/bin/sh
 
-cd game-monitor-repo/GameMonitor
+ls -al /
+
+cd game-monitor-repo/MiniProcess
 dotnet restore
 dotnet build
-#dotnet publish
+dotnet publish
+
+cd ../game-monitor-repo/GameMonitor
+dotnet restore
+dotnet build
+dotnet publish
