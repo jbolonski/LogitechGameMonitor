@@ -12,7 +12,7 @@ params:
   SONAR_HOST_URL:
 
 inputs:
-  - name: game-monitor
+  - name: game-monitor-job
 
 run:
-  path: ci/build-dotnet.sh
+  path: game-monitor-repo/ci/build-dotnet.sh
