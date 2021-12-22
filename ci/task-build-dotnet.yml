@@ -6,7 +6,10 @@ image_resource:
   source: { repository: mcr.microsoft.com/dotnet }
 
 inputs:
-  - name: game-monitor-repo
+- name: game-monitor-repo
+
+outputs:
+- name: game-monitor-repo
 
 run:
   path: game-monitor-repo/ci/build-dotnet.sh
