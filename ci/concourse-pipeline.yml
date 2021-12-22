@@ -8,6 +8,10 @@ resources:
 jobs:
 - name: game-monitor-job
   plan:
-  - get: game-monitor-repo
+  - aggregate:
+    - get: game-monitor-repo
+    - get: project
+      resource: game-monitor-repo
+      trigger: true
   - task: task_build-dotnet
     file: game-monitor-repo/ci/task-build-dotnet.yml
