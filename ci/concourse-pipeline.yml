@@ -1,0 +1,13 @@
+resources:
+- name: game-monitor
+  type: git
+  source:    
+    uri: {{pipeline-git-uri}}
+    branch: {{pipeline-git-branch}}
+
+jobs:
+- name: build-game-monitor
+  plan:
+  - get: game-monitor
+  - task: build
+    file: ci/build-dotnet.yml
