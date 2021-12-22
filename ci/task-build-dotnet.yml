@@ -4,7 +4,7 @@ platform: linux
 image_resource:
   type: docker-image
   source:
-    repository: mcr.microsoft.com/dotnet
+    repository: mcr.microsoft.com/dotnet/sdk:6.0
 
 inputs:
 - name: game-monitor-repo
