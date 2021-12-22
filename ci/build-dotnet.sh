@@ -1,7 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 
 cd project/GameMonitor
-ls -al
-#dotnet restore
-#dotnet build
+dotnet restore
+dotnet build
 #dotnet publish

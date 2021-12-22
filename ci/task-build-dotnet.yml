@@ -10,4 +10,5 @@ inputs:
 - name: game-monitor-repo
 
 run:
-  path: game-monitor-repo/ci/build-dotnet.sh
+  path: /bin/sh
+  args: ["./game-monitor-repo/ci/build-dotnet.sh"]
