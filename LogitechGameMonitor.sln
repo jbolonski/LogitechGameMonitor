@@ -1,0 +1,28 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30114.105
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GameMonitor", "GameMonitor\GameMonitor.csproj", "{6EC549AE-0032-4F6C-AC17-223F0B414D99}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MiniProcess", "MiniProcess\MiniProcess.csproj", "{82DEAB36-7EFF-4A98-82AE-9A17C5762376}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{6EC549AE-0032-4F6C-AC17-223F0B414D99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6EC549AE-0032-4F6C-AC17-223F0B414D99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6EC549AE-0032-4F6C-AC17-223F0B414D99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6EC549AE-0032-4F6C-AC17-223F0B414D99}.Release|Any CPU.Build.0 = Release|Any CPU
+		{82DEAB36-7EFF-4A98-82AE-9A17C5762376}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{82DEAB36-7EFF-4A98-82AE-9A17C5762376}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{82DEAB36-7EFF-4A98-82AE-9A17C5762376}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{82DEAB36-7EFF-4A98-82AE-9A17C5762376}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

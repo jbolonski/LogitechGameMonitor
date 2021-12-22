@@ -1,0 +1,3 @@
+C:\Users\Jason\OneDrive\Source\Repos\LogitechGameMonitor\MiniProcess\bin\Debug\net6.0\MiniProcess.exe
+notepad
+HaloInfinite
