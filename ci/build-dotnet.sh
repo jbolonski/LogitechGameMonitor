@@ -1,5 +1,7 @@
 #!/bin/sh
 
+apt install zip
+
 cd game-monitor-repo
 dotnet restore
 dotnet build
