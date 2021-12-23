@@ -4,15 +4,12 @@ apt install zip
 
 cd game-monitor-repo
 dotnet restore
-dotnet build
-dotnet publish
+dotnet build /nologo /p:PublishProfile=Release /p:PackageLocation="C:SomePathpackage" /p:OutDir="C:SomePathout" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /maxcpucount:1 /p:platform="Any CPU" /p:configuration="Release" /p:DesktopBuildPackageLocation="C:SomePathpackagepackage.zip"
+#dotnet publish
 
-mkdir Output
-cp MiniProcess/bin/Debug/net6.0/win-x64/publish/MiniProcess.exe Output
-cp GameMonitor/bin/Debug/net6.0/win-x64/publish/GameMonitor.exe Output
-cp GameMonitor/bin/Debug/net6.0/win-x64/publish/config.txt Output
+#mkdir Output
+#cp MiniProcess/bin/Debug/net6.0/win-x64/publish/MiniProcess.exe Output
+#cp GameMonitor/bin/Debug/net6.0/win-x64/publish/GameMonitor.exe Output
+#cp GameMonitor/bin/Debug/net6.0/win-x64/publish/config.txt Output
 
-cd Output
-zip -r GameMonitor.zip *.exe *.txt
-
-ls 
+#dotnet build WebApplicationDeploy.sln /nologo /p:PublishProfile=Release /p:PackageLocation="C:SomePathpackage" /p:OutDir="C:SomePathout" /p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /maxcpucount:1 /p:platform="Any CPU" /p:configuration="Release" /p:DesktopBuildPackageLocation="C:SomePathpackagepackage.zip"
