@@ -12,3 +12,6 @@ jobs:
     trigger: true
   - task: task_build-dotnet
     file: game-monitor-repo/ci/task-build-dotnet.yml
+  - put: simple-image
+    params:
+      image: output.zip
