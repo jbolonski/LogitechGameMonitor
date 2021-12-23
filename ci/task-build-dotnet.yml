@@ -9,6 +9,10 @@ image_resource:
 inputs:
 - name: game-monitor-repo
 
+outputs:
+- name: game-monitor-outputs
+  path: Output/GameMonitor.zip
+
 run:
   path: /bin/sh
   args: ["./game-monitor-repo/ci/build-dotnet.sh"]
