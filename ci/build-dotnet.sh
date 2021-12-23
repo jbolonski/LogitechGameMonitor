@@ -1,7 +1,5 @@
 #!/bin/sh
 
-mkdir Output
-
 cd game-monitor-repo
 dotnet restore
 #dotnet build
