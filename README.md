@@ -29,7 +29,7 @@ Invoke-WebRequest $concourseURL -OutFile "${concoursePath}\fly.exe"
 c:\concourse\fly.exe -t local-concourse login -c http://localhost:8080 -u test -p test
 ```
 
-## Set Pipeline
+## Set/Update Pipeline
 
 ```
 cd ci
