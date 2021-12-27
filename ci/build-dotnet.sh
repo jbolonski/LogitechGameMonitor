@@ -15,3 +15,5 @@ cp GameMonitor/bin/Debug/net6.0/win-x64/publish/config.txt Output
 
 cd Output
 zip GameMonitor.zip MiniProcess.exe GameMonitor.exe config.txt
+
+ls
