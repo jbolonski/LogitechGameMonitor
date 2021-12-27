@@ -1,5 +1,6 @@
 #!/bin/sh
 
+apt update -y
 apt install zip -y
 
 cd game-monitor-repo
