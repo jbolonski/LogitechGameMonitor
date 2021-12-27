@@ -1,6 +1,7 @@
 resources:
 - name: game-monitor-repo
   type: git
+  icon: github
   source:    
     uri: {{pipeline-git-uri}}
     branch: {{pipeline-git-branch}}

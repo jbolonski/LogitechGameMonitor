@@ -1,49 +1,14 @@
-# LogitechGameMonitor
+# Logitech Game Monitor
 
+## Problem
+Logitech Gaming software can trigger profiles based on a running application/game. However, It needs the full path to the executable.
 
----
-## Install Windows Docker for Desktop
+If you install games via the Xbox App then you can't get the Logitech software to trigger.
 
-https://docs.docker.com/desktop/windows/install/
-
----
-
-## Create local Concourse instance
-```
-curl.exe -O https://concourse-ci.org/docker-compose.yml
-docker-compose up -d
-```
-
-## Create local Concourse Fly.exe folder
-```
-$concoursePath = 'C:\concourse\'; mkdir $concoursePath; `
-[Environment]::SetEnvironmentVariable('PATH', "$ENV:PATH;${concoursePath}", 'USER'); `
-$concourseURL = 'http://localhost:8080/api/v1/cli?arch=amd64&platform=windows'; `
-Invoke-WebRequest $concourseURL -OutFile "${concoursePath}\fly.exe"
-```
+## Solution
+This application will monitor for a service _by name_ and then spin up a mini process. The mini process will be created with an actual path that the Logitech Gaming Software can watch for.
 
 ---
-## Set Target
-
-```
-c:\concourse\fly.exe -t local-concourse login -c http://localhost:8080 -u test -p test
-```
-
-## Set/Update Pipeline
-
-```
-cd ci
-c:\concourse\fly.exe -t local-concourse set-pipeline -p game-monitor -c concourse-pipeline.yml -l properties.yml
-```
-
-## UnPause the Pipeline
-
-```
-c:\concourse\fly.exe -t local-concourse unpause-pipeline -p game-monitor
-```
-
-## Manual Trigger the Pipeline
-```
-c:\concourse\fly.exe -t local-concourse trigger-job --job game-monitor/game-monitor-job --watch
-```
-
+### Additional Goals
+* Begin Working with Concourse
+* Install Concourse at home
