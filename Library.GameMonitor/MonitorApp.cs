@@ -1,6 +1,7 @@
+﻿namespace Library.GameMonitor;
 using System.Diagnostics;
 
-class MonitorApp{
+public class MonitorApp{
     public string ProcessName {get;set;}="";
     public string LaunchProcess {get;set;}="";
     public bool IsRunning {get;set;}=false;

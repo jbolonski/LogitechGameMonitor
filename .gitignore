@@ -5,6 +5,7 @@ project.lock.json
 *.pyc
 nupkg/
 *.log
+Output/
 
 # Visual Studio Code
 .vscode

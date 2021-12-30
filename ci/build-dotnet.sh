@@ -5,7 +5,6 @@ apt install zip -y -q
 
 cd game-monitor-repo
 dotnet restore
-#dotnet build
 dotnet publish
 
 mkdir Output
