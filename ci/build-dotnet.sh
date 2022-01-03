@@ -1,7 +1,7 @@
 #!/bin/sh
 
-apt update -qq -y
-apt install -o:Dpkg::Use-Pty=0 -qq zip -y
+apt update -qq -y >/dev/null
+apt install -qq zip -y >/dev/null
 
 cd game-monitor-repo
 dotnet restore
