@@ -1,9 +1,12 @@
 using GameMonitorService;
 
 IHost host = Host.CreateDefaultBuilder(args)
+    .UseWindowsService(options => {
+        options.ServiceName = "Game Monitor Service";
+    })
     .ConfigureServices(services =>
     {
-        services.AddHostedService<Worker>();
+        services.AddHostedService<MonitorBackgroundService>();
     })
     .Build();
 
