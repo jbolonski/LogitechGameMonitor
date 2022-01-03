@@ -1,7 +1,7 @@
 #!/bin/sh
 
-apt update -y -q
-apt install zip -y -q
+#apt update -y -q
+#apt install zip -y -q
 
 cd game-monitor-repo
 dotnet restore
@@ -22,13 +22,13 @@ cp GameMonitorService/bin/Release/net6.0/win-x64/publish/config.txt Output
 #####################################################
 # Create Install/Uninstall Scripts for the Service
 #####################################################
-Set-Content Output/install.ps1 'sc.exe create "Game Monitor Service" binpath= "$($PSScriptRoot)\GameMonitorService.exe"'
-Set-Content Output/uninstall.ps1 'sc.exe delete "Game Monitor Service"'
+echo >Output/install.ps1 'sc.exe create "Game Monitor Service" binpath= "$($PSScriptRoot)\GameMonitorService.exe"'
+echo >Output/uninstall.ps1 'sc.exe delete "Game Monitor Service"'
 
 #####################################################
 # Create Zip File
 #####################################################
 cd Output
-zip GameMonitor.zip MiniProcess.exe GameMonitorService.exe config.txt install.ps1 uninstall.ps1
+#zip GameMonitor.zip MiniProcess.exe GameMonitorService.exe config.txt install.ps1 uninstall.ps1
 
 ls
