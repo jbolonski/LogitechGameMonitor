@@ -30,5 +30,4 @@ jobs:
     file: game-monitor-repo/ci/task-build-dotnet.yml
   - put: file-repository
     params:      
-      file: ./*
-      #file: Output/GameMonitor.zip
+      file: game-monitor-outputs/GameMonitor.zip
