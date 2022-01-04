@@ -11,7 +11,7 @@ inputs:
 
 outputs:
 - name: game-monitor-outputs
-  path: Output
+  path: game-monitor-repo/Output
 
 run:
   path: /bin/sh
