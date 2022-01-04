@@ -20,6 +20,7 @@ resources:
     repository: {{artifactory-repository}}
     username: {{artifactory-username}}        
     password: {{artifactory-password}}
+    regex: "Game(?<version>.*).zip"
 
 jobs:
 - name: game-monitor-job
