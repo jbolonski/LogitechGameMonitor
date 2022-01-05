@@ -1,7 +1,7 @@
-pipeline-git-uri: https://github.com/jbolonski/LogitechGameMonitor.git
-pipeline-git-branch: main
-artifactory-uri: http://192.168.1.199:8082/artifactory
-artifactory-username: user-name
-artifactory-password: Pass-Word-01
-artifactory-apikey: AKCp8kqC8tzHDRTZKBmkLZa151rANeAhE66sVP7rHRgSPCuypBEm3A9vXjyA6egqihBkkk8mt
-artifactory-repository: "/localdevrepo/gamemonitor"
+pipeline-git-uri: 
+pipeline-git-branch: 
+artifactory-uri: 
+artifactory-username: 
+artifactory-password: 
+artifactory-apikey: 
+artifactory-repository: 
