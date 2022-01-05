@@ -6,7 +6,7 @@ project.lock.json
 nupkg/
 *.log
 Output/
-properties.yml
+ci/properties.yml
 
 # Visual Studio Code
 .vscode
