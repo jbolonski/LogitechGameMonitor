@@ -6,14 +6,16 @@ public class MonitorBackgroundService : BackgroundService
     private readonly ILogger<MonitorBackgroundService> _logger;
     private readonly List<MonitorApp> MonitorApps = new();
     private readonly ProcConfig ProcConfig;
+    private readonly string AppBaseDir;
 
     public MonitorBackgroundService(ILogger<MonitorBackgroundService> logger)
     {
-        string? strWorkPath = Path.GetDirectoryName("config.txt");
+        Directory.SetCurrentDirectory(AppDomain.CurrentDomain.BaseDirectory);
+        AppBaseDir = AppContext.BaseDirectory;
+        string? strConfigPath = Path.Join(AppBaseDir, "config.txt");
+        if (strConfigPath == null) { throw new Exception("config.txt missing."); }
 
-        if (strWorkPath == null) { throw new Exception("config.txt missing."); }
-
-        ProcConfig = new ProcConfig(strWorkPath);
+        ProcConfig = new ProcConfig(AppBaseDir,"config.txt");
         _logger = logger;
     }
 
@@ -27,7 +29,8 @@ public class MonitorBackgroundService : BackgroundService
 
             foreach (var miniProcConfig in ProcConfig.MiniProcConfigList)
             {
-                MiniProc miniProc = new(ProcConfig.ProcPathTemplate, miniProcConfig);
+                string ProcPathTemplateFullPath = Path.Join(ProcConfig.BasePath, ProcConfig.ProcPathTemplate);
+                MiniProc miniProc = new(ProcPathTemplateFullPath, miniProcConfig);
                 _logger.LogInformation(
                     "Monitor: {0} ->  {1}",
                     miniProc.MonitorProcessName,
