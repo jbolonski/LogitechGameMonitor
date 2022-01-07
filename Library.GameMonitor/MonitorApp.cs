@@ -26,6 +26,8 @@ public class MonitorApp{
         Console.WriteLine("Launching : {0}",LaunchProcess);
         TriggerProcess = new();
         TriggerProcess.StartInfo.FileName = LaunchProcess;
+        TriggerProcess.StartInfo.WindowStyle = ProcessWindowStyle.Minimized;
+        TriggerProcess.StartInfo.UseShellExecute = true;
         TriggerProcess.Start();
     }
 

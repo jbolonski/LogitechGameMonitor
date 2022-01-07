@@ -16,8 +16,7 @@ cp GameMonitorService/bin/Release/net6.0-windows/win-x64/publish/config.txt Outp
 cp GameMonitorService/bin/Release/net6.0-windows/win-x64/publish/GameMonitorService.exe Output
 
 #####################################################
-# Create Install/Uninstall Scripts for the Service
+# Copy Install/Uninstall Scripts for the Application
 #####################################################
-Set-Content Output/install.ps1 'sc.exe create "Game Monitor Service" binpath= "$($PSScriptRoot)\GameMonitorService.exe" start= auto'
-Add-Content Output/install.ps1 'sc.exe description "Game Monitor Service" "Config at $($PSScriptRoot)"'
-Set-Content Output/uninstall.ps1 'sc.exe delete "Game Monitor Service"'
+cp install.ps1 Output
+cp uninstall.ps1 Output
